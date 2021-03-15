@@ -28,7 +28,7 @@ def edge_disjoint_shortest_pair(graph, source, length):
       G[v][u][0]["length"] = -G[v][u][0]["length"]
 
     try:
-      weight2, tmpPath2 = nx.single_source_bellman_ford(G, source, t) # Use bellman ford to find the 2nd path as ot can handle negative edge weights
+      weight2, tmpPath2 = nx.single_source_bellman_ford(G, source, t) # Use bellman ford to find the 2nd path as it can handle negative edge weights
     except nx.exception.NetworkXNoPath:
       continue # If no path was found move on to the next iteration
 
@@ -37,7 +37,6 @@ def edge_disjoint_shortest_pair(graph, source, length):
     if currentCircuitWeight <= length and currentCircuitWeight > bestCircuitWeight:
       bestCircuitWeight = currentCircuitWeight
       # Update our variables storing the best paths seen so far
-      print(bestCircuitWeight)
       path1 = tmpPath1
       path2 = tmpPath2
       target = t
