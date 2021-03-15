@@ -17,7 +17,7 @@ random
 
 ## Improvements:
 * Error Handling
-* Add loading screen while paths are being generates
+* Add loading screen while paths are being generated
 * Stop if a path is found within a given tolerance of the desired length (e.g. 50m)
 * Remove brides and implement heuristics as suggested in R.Lewis' paper
 
