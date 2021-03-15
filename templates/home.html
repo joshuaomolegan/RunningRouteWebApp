@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+  <form method="post">
+    <input type="street" name="streetName" placeholder="Street Name" required="" autofocus="" style="width: 100%; margin-top: 10px;">
+    <input type="city" name="cityName" placeholder="City" required="" autofocus="" style="width: 100%; margin-top: 10px;">
+    <input type="routeLength" name="routeLength" placeholder="Route Length (in metres)" required="" autofocus="" style="width: 100%; margin-top: 10px;">
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="width: 100%; margin-top: 10px;">Start</button><br>
+  </form>
+{% endblock %}
