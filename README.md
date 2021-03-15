@@ -1,6 +1,8 @@
 # Flask-Running-App
 A simple web app made using flask and bootstrap that, when given a length and a location, will generate a circuit of that length nearby. This can be used to plan a running route. To use the web app please run:
-> python app.py
+> python app.py  
+
+Then visit the link shown in terminal to interact with the web app
 
 ## Libraries:
 flask  
