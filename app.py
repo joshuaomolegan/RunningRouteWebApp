@@ -1,9 +1,7 @@
 from flask import Flask, render_template, request
-#from flask_ngrok import run_with_ngrok #for use with google colab
 from mapGen import plot_route
 
 app = Flask(__name__)
-#run_with_ngrok(app) #allows the web app to run in google colab
 app.debug = True
 
 @app.route("/")
