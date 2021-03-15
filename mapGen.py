@@ -1,7 +1,7 @@
 import osmnx as ox
 import networkx as nx
 from math import inf
-import folium, random, webbrowser, copy
+import folium, random, webbrowser
 
 def edge_disjoint_shortest_pair(graph, source, length):
   V = list(graph.nodes) # List of nodes / vertexes
