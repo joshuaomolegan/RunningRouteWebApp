@@ -17,7 +17,7 @@ random
 **mapGen.py** - Contains functions to generate and plot the route on a map of the area around the given location  
 **/templates** - Contains the html files used for the web app
 
-## Improvements:
+## TODO:
 * Add loading screen while paths are being generated
 * Stop if a path is found within a given tolerance of the desired length (e.g. 50m)
 * Remove brides and implement heuristics as suggested in R.Lewis' paper
