@@ -109,27 +109,34 @@ def make_circuit(source, target, path1, path2):
         current = path1[current]
   
   # Turn both paths into lists
-  forwardPathList = [0]*len(forwardPath) 
-  reversePathList = [0]*len(reversePath)
+  forwardPathList = [] 
+  reversePathList = []
 
   current = source
   for i in range(len(forwardPath)):
-    forwardPathList[i] = current
+    forwardPathList.append(current)
     current = forwardPath[current]
 
   current = source
   for i in range(len(reversePath)):
-    reversePathList[i] = current
+    reversePathList.append(current)
     current = reversePath[current]
 
   return (forwardPathList, reversePathList)
 
+# Function to plot the route onto a map
 def plot_route(street, city, route_length):
+  errorMsg = None # Store the error message text
   location = ox.geocoder.geocode(street + " " + city) # Get (lat, long)
+  
   G = ox.graph_from_point(location, route_length//2, network_type="walk") # Graph around given location
   closest_to_start = ox.get_nearest_node(G, location, "euclidean") # Find node closest to start
 
   length, (path1, path2) = edge_disjoint_shortest_pair(G, closest_to_start, route_length) # Get the length and paths of the generated cycle
+
+  # Raise an exception if we don't find a path both ways
+  if path1 == [] or path2 == []: 
+    raise Exception("No path was found")
 
   # Plot the path on a folium map
   folium_map = folium.Map(location, width="100%", height="100%")

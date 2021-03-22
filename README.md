@@ -18,7 +18,6 @@ random
 **/templates** - Contains the html files used for the web app
 
 ## Improvements:
-* Error Handling
 * Add loading screen while paths are being generated
 * Stop if a path is found within a given tolerance of the desired length (e.g. 50m)
 * Display actual path length to the user
