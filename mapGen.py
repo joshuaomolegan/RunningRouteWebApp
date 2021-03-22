@@ -1,6 +1,6 @@
 import osmnx as ox
 import networkx as nx
-from math import inf
+from math import inf, floor
 import folium, random
 
 def edge_disjoint_shortest_pair(graph, source, length):
@@ -142,7 +142,7 @@ def plot_route(street, city, route_length):
   folium_map = folium.Map(location, width="100%", height="100%")
   tmp_route_map = ox.folium.plot_route_folium(G, path1, folium_map)
   route_map = ox.folium.plot_route_folium(G, path2, tmp_route_map, color="#cc0000") # Make the colour of the 2nd path red
-  folium.Marker(location=location).add_to(route_map)
+  folium.Marker(location=location, popup=folium.Popup(f"<b>Route length: {floor(length)}m</b>", show=True)).add_to(route_map) #Add marker to start point and show route length as a pop up
   return route_map._repr_html_()
 
 
