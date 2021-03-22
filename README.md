@@ -20,7 +20,6 @@ random
 ## Improvements:
 * Add loading screen while paths are being generated
 * Stop if a path is found within a given tolerance of the desired length (e.g. 50m)
-* Display actual path length to the user
 * Remove brides and implement heuristics as suggested in R.Lewis' paper
 * Add unit tests
 
