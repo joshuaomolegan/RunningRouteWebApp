@@ -34,15 +34,15 @@ def edge_disjoint_shortest_pair(graph, source, length):
 
     # Update the best weight seen so far
     currentCircuitWeight = pathWeight[t] + weight2 # Since we negated the weights of any edges traversed a 2nd time in the 2nd path, we can just add their weights
-    if currentCircuitWeight <= length and currentCircuitWeight > bestCircuitWeight:
+    if abs(currentCircuitWeight - length) < abs(bestCircuitWeight - length):
       bestCircuitWeight = currentCircuitWeight
       # Update our variables storing the best paths seen so far
       path1 = tmpPath1
       path2 = tmpPath2
       target = t
     
-    # If we find a path that is exactly equal to the length we're looking for, stop searching
-    if bestCircuitWeight == length:
+    # If we find a path within 100m of the given length, stop searching
+    if abs(bestCircuitWeight - length) <= 100:
       break
   
   # Turn the list of paths into a dictionary where each entry is {predecessor: child} 
