@@ -18,6 +18,7 @@ random
 **/templates** - Contains the html files used for the web app
 
 ## TODO:
+* Refactor mapGen.py
 * Add loading screen while paths are being generated
 * Remove brides and implement heuristics as suggested in R.Lewis' paper
 * Add unit tests
