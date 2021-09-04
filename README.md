@@ -19,6 +19,7 @@ random
 
 ## TODO:
 * Refactor mapGen.py
+* Add requirements.txt
 * Add loading screen while paths are being generated
 * Remove brides and implement heuristics as suggested in R.Lewis' paper
 * Add unit tests
