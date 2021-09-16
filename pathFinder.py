@@ -69,11 +69,10 @@ class PathFinder:
                     graph[u][v]["length"] *= -1
 
 
-    # Function to remove bridges by adding dummy nodes
+    # Function to remove mark edges that contain bridges
     def __mark_bridges(self, graph):
         bridgeList = list(nx.bridges(graph))
         for u, v in bridgeList:
-            # Mark edges that contain bridges
             graph[u][v].update({"isBridge": True})
 
     # Helper function to turn a path list into a dictionary
