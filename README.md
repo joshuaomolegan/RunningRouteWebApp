@@ -4,25 +4,18 @@ A simple web app made using flask and bootstrap that, when given a length and a 
 
 Then visit the link shown in terminal to interact with the web app
 
-## Libraries:
-flask  
-osmnx  
-networkx  
-math  
-folium  
-random  
+## Example Routes:
+These routes were created at random locations  
 
-## Files:
-**app.py** - Contains the code to initialise the web app and display the map once created  
-**mapGen.py** - Contains functions to generate and plot the route on a map of the area around the given location  
-**/templates** - Contains the html files used for the web app
+**Lower Sloane Street, London**
+![Example Route 1](https://user-images.githubusercontent.com/57597103/133622649-864fc488-370d-4f2f-829f-9b7b6c857e90.png)  
+
+**Ollerton Road, London**
+![Example Route 2](https://user-images.githubusercontent.com/57597103/133622723-815b56c7-cfc3-449f-8fc7-557750bac017.png)  
 
 ## TODO:
-* Refactor mapGen.py
-* Add requirements.txt
 * Add loading screen while paths are being generated
-* Remove brides and implement heuristics as suggested in R.Lewis' paper
-* Add unit tests
+* Implement heuristics as suggested in R.Lewis' paper
 
 ## References:
 A Heuristic Algorithm for Finding Attractive Fixed-Length Circuits in Street Maps - R. Lewis  
