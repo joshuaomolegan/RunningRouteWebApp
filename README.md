@@ -7,11 +7,11 @@ Then visit the link shown in terminal to interact with the web app
 ## Example Routes:
 These routes were created at random locations  
 
-**Lower Sloane Street, London**
-![Example Route 1](https://user-images.githubusercontent.com/57597103/133622649-864fc488-370d-4f2f-829f-9b7b6c857e90.png)  
+**Lower Sloane Street, London, ~1500m**
+![Lower Sloane Street](https://user-images.githubusercontent.com/57597103/135767284-b09e4f37-3197-4e05-9bf9-feab081e867c.png)
 
-**Ollerton Road, London**
-![Example Route 2](https://user-images.githubusercontent.com/57597103/133622723-815b56c7-cfc3-449f-8fc7-557750bac017.png)  
+**Ollerton Road, London, ~3500m**
+![Ollerton Road](https://user-images.githubusercontent.com/57597103/135767304-6d89bfce-dac1-468c-a880-7b319a52cbf2.png) 
 
 ## TODO:
 * Add loading screen while paths are being generated
