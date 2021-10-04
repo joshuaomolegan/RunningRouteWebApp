@@ -91,10 +91,10 @@ class PathFinder:
         pred = {n: None for n in graph.nodes}
 
         lenToNode[self.src] = 0
-        S = [(0, self.src)]
+        S = [(0, self.src, None)]
 
         while S:
-            len_u, u = heapq.heappop(S)
+            len_u, u, prev_u = heapq.heappop(S)
             if u == target:
                 return (len_u, self.__generate_path(pred, u, graph))
             else:
@@ -102,11 +102,15 @@ class PathFinder:
                     # Restrict traversing edges in path 1 in a direction away from source unless edge is a bridge
                     if path1.get(u, -1) == v and not graph[u][v].get("isBridge", False):
                         continue
+
+                    # Don't allow traversal of edge just travelled
+                    if v == prev_u:
+                        continue
         
                     if len_u + graph[u][v]["length"] < lenToNode[v]:
                         lenToNode[v] = len_u + graph[u][v]["length"]
                         pred[v] = u
-                        heapq.heappush(S, (lenToNode[v], v))
+                        heapq.heappush(S, (lenToNode[v], v, u))
                 
         return (None, None)
 
